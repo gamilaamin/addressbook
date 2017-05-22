@@ -1,0 +1,113 @@
+
+body,html{
+     height: 100%;
+    }
+     .parallax {
+
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-border:50px;
+}
+
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-device-width: 1024px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+ input:required:focus {
+  border: 1px solid red;
+  outline: none;
+}
+input:required:hover {
+  opacity: 1;
+}
+               img {
+                float: left;
+                width: 100px;
+                height: 100px;
+                background: #555;
+                margin-top: 0px;
+                margin-left: 100px;
+                margin-down: 100px;
+
+              }
+             input[type=text] {
+                 width: 50%;
+                 padding: 12px 20px;
+                 margin: 8px 0;
+                 display: inline-block;
+                 border: 1px solid #ccc;
+                 border-radius: 4px;
+                 box-sizing: border-box;
+             }
+             input[type=password] {
+                              width: 50%;
+                              padding: 12px 20px;
+                              margin: 8px 0;
+                              display: inline-block;
+                              border: 1px solid #ccc;
+                              border-radius: 4px;
+                              box-sizing: border-box;
+                          }
+                          input[type=email] {
+                                                        width: 50%;
+                                                        padding: 12px 20px;
+                                                        margin: 8px 0;
+                                                        display: inline-block;
+                                                        border: 1px solid #ccc;
+                                                        border-radius: 4px;
+                                                        box-sizing: border-box;
+                                                    }
+                          input[type=submit] {
+                              background-color:#DB7093;
+                               width: 50%;
+                               padding: 12px 20px;
+                               margin: 8px 0;
+                               border-radius: 4px;
+                          }
+
+                          tr:hover{
+                          background-color: #DB7093
+                          }
+
+                           th{
+                              background-color:#DB7093;
+                              width: 50%;
+                              padding: 12px 20px;
+                              margin: 8px 0;
+                              border-radius: 4px;
+                              border-color:#DB7093;
+                          }
+                          ul {
+                              list-style-type: none;
+                              margin-left:1300px;
+                              margin-right:100px;
+                              padding: 0;
+                              overflow: hidden;
+                              background-color:#DB7093;
+                          }
+
+                          li {
+                              float: left;
+                          }
+
+                          li a {
+                              display: block;
+                              color: white;
+                              text-align: center;
+                              padding: 16px;
+                              text-decoration: none;
+                          }
+
+                          li a:hover {
+                              background-color: #111111;
+                          }
+
