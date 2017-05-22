@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
+      function SubmitView() {
+        $.ajax({
+          url: "/View",
+          method: "POST",
+          data: $("#ADD").serialize(),
+          success: function(contact) {
+            console.log(contact)
+            var IDItem = $("#View");
+            IDItem.empty();
+            contact.forEach(
+            function(result){
+              var row = $("<tr><td>" + result.Name + "</td><td>" + result.Phone + "</td><td>" + result.Phone1 + "</td></tr>");
+              IDItem.append(row);
+            });
+          }
+        });
+
+      }
+    </script>
+    <script>
+        function showinput(elem) {
+         document.getElementById("ph").type="text";
+    }
+    </script>
+
+    <script>
+function myFunction() {
+    var x;
+    if (confirm("Are you sure to logout !") == true) {
+        x = "/logout";
+    } else {
+        x = "/submit_login";
+    }
+    document.getElementById("demo").herf = x;
+}
+     </script>
+</head>
+
+<body>
+    <ul>
+    <li><a href="/" >Logout</a></li>
+    </ul>
+    <div style="width: 100%;">
+
+            <center>
+            <h1>My Contact
+            <input type="button" value="view" onclick="SubmitView()" id="V" t/>
+            </h1>
+            <table id="myTable" >
+                <thead>
+                <tr>
+                    <th style="width:40%;">Name</th>
+                    <th style="width:30%;">Phone</th>
+                    <th style="width:50%;">Anther phone</th>
+                </tr>
+                </thead>
+                <tbody id="View">
+
+                </tbody>
+            </table>
+            </center>
+        </div>
+        <div >
+            <center>
+            <h1>Add your contact phone and name</h1>
+            <form id="ADD" action="/add_contact" method="post">
+                <input type="text" name="name1" placeholder="Name..." />
+                <br>
+                <input type="text" name="Phone" placeholder="Phone...."/>
+                <br>
+                <a href="#" onclick="showinput(this) "name="link">Add anther phone <input type="hidden" placeholder="anther phone...." name="phone1"id="ph"></a>
+                <br>
+                <br>
+                <input type="submit" value="Add">
+                <br>
+                <br>
+            </form>
+            </center>
+        </div>
+    </div>
+
+    <div style="clear:both"></div>
+</body>
+</html>
